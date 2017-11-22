@@ -5,9 +5,18 @@
     <title>Thoril's blog</title>
 </head>
 <body>
-cool huh
+    <div>
+        <h1><a href="/">Django Girls</a></h1>
+    </div>
+
+    {%  for post in posts %}
+        <div>
+            <h1><a>{{ post.title }}</a></h1>
+            <p>published: {{ post.published_date }}</p>
+            <p> {{ post.text|linebreaksbr }}</p>
+    {%  endfor %}
+    </div>
 
 
-<p>I don't know why this is not working</p>
 </body>
 </html>
